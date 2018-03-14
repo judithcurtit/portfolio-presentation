@@ -1,0 +1,23 @@
+$(function(){
+    $("#photo1").click(function(e){
+        
+        e.preventDefault();
+        console.log("photo1");
+        $.get("photo-album1.html").done(function(data){
+            $('#photo').html(data);
+        });
+    }) 
+    $("#photo2").click(function(e){
+        e.preventDefault();
+        console.log("photo2");
+        $.get("photo-album2.html").done(function(data){
+            $('#photo').html(data);
+        });
+    }) 
+    $("#photo3").click(function(e){
+        e.preventDefault();
+        $.get("photo-album3.html").done(function(data){
+            $('#photo').html(data);
+        });
+    }) 
+});
